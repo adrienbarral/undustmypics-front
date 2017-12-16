@@ -1,0 +1,13 @@
+.after{
+  position: absolute;
+}
+.before{
+  overflow: hidden;
+  position: absolute;
+  border-right: aliceblue solid 2px;
+}
+.before_after_slider{
+  position: relative;
+}
+
+

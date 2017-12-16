@@ -1,0 +1,8 @@
+<div class="before_after_slider" [style.width.px]="width">
+  <div class="after">
+    <img src={{after}} [style.width.px]="width"/>
+  </div>
+  <div class="before" [@swipe]="swipeState" (@swipe.done)="animationFinished()">
+    <img src={{before}} [style.width.px]="width"/>
+  </div>
+</div>
