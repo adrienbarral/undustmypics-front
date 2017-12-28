@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from "@angular/core";
-import {animate, state, style, transition, trigger} from "@angular/animations";
+import {Component, Input, OnInit} from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-photos-compare',
@@ -21,7 +21,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 
 export class PhotosCompareComponent implements OnInit {
 
-  images = ['IMG_3569.JPG', 'RSCN2679.JPG'];
+  images = ['IMG_3569.JPG', 'RSCN2679.JPG', 'IMG_4644.JPG'];
   counter = 0;
   before: string;
   after: string;
@@ -33,6 +33,14 @@ export class PhotosCompareComponent implements OnInit {
   }
 
   ngOnInit() {
+    const mq = window.matchMedia('(max-width:600px)');
+    if (mq.matches) {
+      this.width = .95 * window.innerWidth;
+      console.log("Petit écran");
+    } else {
+      this.width = .5 * window.innerWidth;
+      console.log("Grand écran : " + window.innerWidth);
+    }
     this.animationFinished();
     this.timer = setInterval(() => {
       this.swipeState = 'after';
