@@ -36,7 +36,6 @@ export class PhotosCompareComponent implements OnInit {
     this.animationFinished();
     this.timer = setInterval(() => {
       this.swipeState = 'after';
-      console.log(this.swipeState);
     }, 3000);
   }
 
@@ -48,7 +47,6 @@ export class PhotosCompareComponent implements OnInit {
         this.counter++;
       }
       this.swipeState = 'before';
-      console.log(this.swipeState);
     }
     this.before = 'assets/' + this.images[this.counter];
     this.after = 'assets/UNDUSTED_' + this.images[this.counter];

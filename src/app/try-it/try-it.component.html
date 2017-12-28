@@ -1,0 +1,12 @@
+<mat-card class="try-it">
+  <div class="explain">
+    <h2 class="mat-h2">Débruitez vos photos de plongées en un seul click !</h2>
+  </div>
+  <div class="upload">
+    <button mat-fab color="accent" class="upload-button" (click)="imgFileInput.click()">
+      <mat-icon aria-label="icon-button with an upload icon">file_upload</mat-icon>
+    </button>
+    <input type="file" #imgFileInput hidden (change)="onFileSelected(imgFileInput.files)" accept="image/*"/>
+    <p class="mat-h3" style="padding-left: 12px">Essayez avec une de vos photos</p>
+  </div>
+</mat-card>

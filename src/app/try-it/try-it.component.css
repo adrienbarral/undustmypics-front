@@ -1,0 +1,15 @@
+.try-it{
+  width: 250px;
+  height: 450px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  justify-content: space-between;
+}
+
+.upload{
+  display: flex;
+  flex-direction: row;
+}
