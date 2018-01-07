@@ -6,7 +6,7 @@
     <button mat-fab color="accent" class="upload-button" (click)="imgFileInput.click()">
       <mat-icon aria-label="icon-button with an upload icon">file_upload</mat-icon>
     </button>
-    <input type="file" #imgFileInput hidden (change)="onFileSelected(imgFileInput.files)" accept="image/*"/>
+    <input type="file" #imgFileInput hidden (change)="onFileSelected(imgFileInput.files)" accept="image/jpeg"/>
     <p class="mat-h3" style="padding-left: 12px">Essayez avec une de vos photos</p>
   </div>
 </mat-card>
